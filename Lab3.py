@@ -6,6 +6,17 @@ SORT_DESCENDING = 1
 
 def bubble_sort(arr, sorting_order):
 
+    if len(arr) == 0:
+        return 0
+
+    # Check if all elements are integers
+    if not all(isinstance(x, int) for x in arr):
+        return 2
+
+    # Check if there are 10 or more elments
+    if len(arr) >= 10:
+        return 1
+
     # Copy input list to results list
     arr_result = arr.copy()
 
